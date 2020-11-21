@@ -9,10 +9,13 @@
   .app-sidenav-content {
     display: flex;
     height: 100%;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
   }
   
   .app-sidenav {
     width: 240px;
+  }
+
+  .wrapper {
+    margin: 60px;
   }
