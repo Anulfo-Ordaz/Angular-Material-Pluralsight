@@ -27,6 +27,8 @@ import { MatMenuModule } from '@angular/material/menu';
 import { NewContactDialogComponent } from './components/new-contact-dialog/new-contact-dialog.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatSelectModule } from '@angular/material/select';
+import { ReactiveFormsModule} from '@angular/forms';
+
 const routes: Routes = [
   {
     path: '', component: ContactmanagerAppComponent,
@@ -61,6 +63,7 @@ const routes: Routes = [
     MatMenuModule,
     MatDialogModule,
     MatSelectModule,
+    ReactiveFormsModule,
     RouterModule.forChild(routes)
   ],
   providers: [
