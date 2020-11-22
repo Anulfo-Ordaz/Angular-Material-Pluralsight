@@ -12,6 +12,9 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatListModule} from '@angular/material/list';
 import {MatCardModule} from '@angular/material/card';
+import {MatIconModule} from '@angular/material/icon';
+import { UserService } from './services/user.service';
+import { HttpClientModule } from '@angular/common/http';
 
 const routes: Routes = [
   { path: '', component: ContactmanagerAppComponent,
@@ -26,14 +29,19 @@ const routes: Routes = [
   declarations: [ContactmanagerAppComponent, ToolbarComponent, MainContentComponent, SidenavComponent],
   imports: [
     CommonModule,
+    HttpClientModule,
     MaterialModule,
     FlexLayoutModule,
     MatSidenavModule,
     MatToolbarModule,
     MatListModule,
     MatCardModule,
+    MatIconModule,
     FormsModule,
     RouterModule.forChild(routes)
+  ],
+  providers: [
+    UserService
   ]
 })
 export class ContactmanagerModule { }
