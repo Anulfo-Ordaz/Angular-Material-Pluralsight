@@ -22,6 +22,7 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatTableModule } from '@angular/material/table';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
+import {MatSortModule} from '@angular/material/sort';
 
 const routes: Routes = [
   {
@@ -53,6 +54,7 @@ const routes: Routes = [
     MatTableModule,
     MatFormFieldModule,
     MatInputModule,
+    MatSortModule,
     RouterModule.forChild(routes)
   ],
   providers: [
