@@ -14,7 +14,7 @@ export class ContactmanagerAppComponent implements OnInit {
 
   constructor(iconRegistry: MatIconRegistry, sanitizer: DomSanitizer) { 
     iconRegistry.addSvgIconSet(
-      sanitizer.bypassSecurityTrustResourceUrl('./assets/avatar.svg'))
+      sanitizer.bypassSecurityTrustResourceUrl('../assets/avatars.svg'))
 
   }
 

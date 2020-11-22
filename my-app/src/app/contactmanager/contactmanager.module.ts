@@ -5,21 +5,24 @@ import { ContactmanagerAppComponent } from './contactmanager-app.component';
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { MainContentComponent } from './components/main-content/main-content.component';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
-import { MaterialModule } from '../shared/material/material.module'; 
+import { MaterialModule } from '../shared/material/material.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule } from '@angular/forms';
-import {MatSidenavModule} from '@angular/material/sidenav';
-import {MatToolbarModule} from '@angular/material/toolbar';
-import {MatListModule} from '@angular/material/list';
-import {MatCardModule} from '@angular/material/card';
-import {MatIconModule} from '@angular/material/icon';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatListModule } from '@angular/material/list';
+import { MatCardModule } from '@angular/material/card';
+import { MatIconModule } from '@angular/material/icon';
 import { UserService } from './services/user.service';
 import { HttpClientModule } from '@angular/common/http';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 const routes: Routes = [
-  { path: '', component: ContactmanagerAppComponent,
+  {
+    path: '', component: ContactmanagerAppComponent,
     children: [
-      {path: '', component: MainContentComponent}
+      { path: ':id', component: MainContentComponent },
+      { path: '', component: MainContentComponent }
     ]
   },
   { path: '**', redirectTo: '' }
@@ -37,6 +40,7 @@ const routes: Routes = [
     MatListModule,
     MatCardModule,
     MatIconModule,
+    MatProgressSpinnerModule,
     FormsModule,
     RouterModule.forChild(routes)
   ],
