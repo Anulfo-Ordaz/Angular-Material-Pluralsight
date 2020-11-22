@@ -21,9 +21,12 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatTableModule } from '@angular/material/table';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import {MatInputModule} from '@angular/material/input';
-import {MatSortModule} from '@angular/material/sort';
-
+import { MatInputModule } from '@angular/material/input';
+import { MatSortModule } from '@angular/material/sort';
+import { MatMenuModule } from '@angular/material/menu';
+import { NewContactDialogComponent } from './components/new-contact-dialog/new-contact-dialog.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatSelectModule } from '@angular/material/select';
 const routes: Routes = [
   {
     path: '', component: ContactmanagerAppComponent,
@@ -36,7 +39,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [ContactmanagerAppComponent, ToolbarComponent, MainContentComponent, SidenavComponent, NotesComponent],
+  declarations: [ContactmanagerAppComponent, ToolbarComponent, MainContentComponent, SidenavComponent, NotesComponent, NewContactDialogComponent],
   imports: [
     CommonModule,
     HttpClientModule,
@@ -55,6 +58,9 @@ const routes: Routes = [
     MatFormFieldModule,
     MatInputModule,
     MatSortModule,
+    MatMenuModule,
+    MatDialogModule,
+    MatSelectModule,
     RouterModule.forChild(routes)
   ],
   providers: [
