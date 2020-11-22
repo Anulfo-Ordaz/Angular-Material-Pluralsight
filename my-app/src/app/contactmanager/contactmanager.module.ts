@@ -27,7 +27,10 @@ import { MatMenuModule } from '@angular/material/menu';
 import { NewContactDialogComponent } from './components/new-contact-dialog/new-contact-dialog.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatSelectModule } from '@angular/material/select';
-import { ReactiveFormsModule} from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 const routes: Routes = [
   {
@@ -41,7 +44,12 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [ContactmanagerAppComponent, ToolbarComponent, MainContentComponent, SidenavComponent, NotesComponent, NewContactDialogComponent],
+  declarations: [ContactmanagerAppComponent,
+    ToolbarComponent,
+    MainContentComponent,
+    SidenavComponent,
+    NotesComponent,
+    NewContactDialogComponent],
   imports: [
     CommonModule,
     HttpClientModule,
@@ -64,6 +72,9 @@ const routes: Routes = [
     MatDialogModule,
     MatSelectModule,
     ReactiveFormsModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatSnackBarModule,
     RouterModule.forChild(routes)
   ],
   providers: [
